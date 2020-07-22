@@ -26,7 +26,7 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 **geometry**: Geometry column displays the latitudes and longitudes of the wards.\
 ### Exploratory Data Analysis
 1. Plot of Delhi:
-
+![image](https://user-images.githubusercontent.com/57316337/88227561-6d084380-cc8b-11ea-9a3e-19ac35e21d76.png)
 
 
 
