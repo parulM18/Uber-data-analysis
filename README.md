@@ -7,7 +7,7 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 ### Data Description:
 - **Total Number of Rows**: 290
 - **Total Number of Columns**: 5
-- **Column Description:
+- **Column Description**:
 
 
 | Column        | Non-Null Count | Dtype     | Unique Values |
@@ -17,6 +17,30 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 |  MOVEMENT_ID  | 290 non-null   |  object   | 290           |
 |  DISPLAY_NAME | 290 non-null   |  object   | 290           |  
 |  geometry     | 290 non-null   |  geometry | 290           |
+
+
+**WARD_NO**: There is unique ward number assigned to every ward, here are 289 unique wards with 1 empty entry.\
+**WARD_NAME**: Name of the particular ward, here are 288 unique wards with 1 empty entry.\
+**MOVEMENT_ID**: Every ward have a unique movement-id which is same for every location of that particular ward.\
+**DISPLAY_NAME**: Every ward have a unique Display name which is the proper name of that particular ward used to identify different locations.\
+**geometry**: Geometry column displays the latitudes and longitudes of the wards.\
+### Exploratory Data Analysis
+1. Plot of Delhi:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
