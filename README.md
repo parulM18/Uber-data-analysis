@@ -5,7 +5,7 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 
 ## 1. New-Delhi Wards Data
 ### Data Description:
-**Total Number of Rows**:290
+**Total Number of Rows**:290/
 **Total Number of Columns**:5
 
 
