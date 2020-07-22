@@ -39,9 +39,8 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 3. Visualising the wards on the basis of WARD_NO and locating the ward with empty value:
 
 ![image](https://user-images.githubusercontent.com/57316337/88228431-c9b82e00-cc8c-11ea-9dc4-0e3d950a5bb3.png)
- #### Inference:
-  - The red coloured hatched lines represting the ward which don't have a Ward number.
-
+#### Inference:
+ - The red coloured hatched lines represting the ward which don't have a Ward number.
 
 
 4. Visualising the wards on the basis of WARD_Name and locating the ward with empty value:
@@ -49,8 +48,8 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 
 ![image](https://user-images.githubusercontent.com/57316337/88228516-e81e2980-cc8c-11ea-8261-0baa07e48a0d.png)
 #### Inferences:
-- The red coloured hatched lines represting the ward which don't have a Ward-Name.
-- This shows that the same ward have both the missing values i.e, of ward-no. and ward-name.
+ - The red coloured hatched lines represting the ward which don't have a Ward-Name.
+ - This shows that the same ward have both the missing values i.e, of ward-no. and ward-name.
 
 
 
@@ -58,6 +57,6 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 
 ![image](https://user-images.githubusercontent.com/57316337/88228606-0e43c980-cc8d-11ea-8cb2-f2233d10cb1b.png)
 #### Inference:
-- Every ward have a their centroid even the one which don't have ward-no. ans ward-name.
+ - Every ward have a their centroid even the one which don't have ward-no. ans ward-name.
 
 
