@@ -45,7 +45,7 @@ Inference:
 - The red coloured hatched lines represting the ward which don't have a Ward number.
 
 
-##### 4. Visualising the wards on the basis of WARD_Name and locating the ward with empty value:
+#### 4. Visualising the wards on the basis of WARD_Name and locating the ward with empty value:
 
 
 ![image](https://user-images.githubusercontent.com/57316337/88228516-e81e2980-cc8c-11ea-8261-0baa07e48a0d.png)
@@ -65,5 +65,29 @@ Inferences:
 
 Inference:
  - Every ward have a their centroid even the one which don't have ward-no. ans ward-name.
+ 
+ ### **New-delhi wards 2019(quater-2) All-Hourly-Aggregate data**
+ ### Data Description:
+- **Total Number of Rows**: 1455932
+- **Total Number of Columns**: 7
+- **Column Description**:
+
+
+Column                                    | Non-Null Count   | Dtype   | Unique Values |
+----------------------------------------- | ---------------- |-------- | ------------- |                 
+sourceid                                  | 1455932 non-null | int64   | 290           | 
+dstid                                     | 1455932 non-null | int64   | 290           | 
+hod                                       | 1455932 non-null | int64   | 24            |
+mean_travel_time                          | 1455932 non-null | float64 | 419407        |
+standard_deviation_travel_time            | 1455932 non-null | float64 | 126617        | 
+geometric_mean_travel_time                | 1455932 non-null | float64 | 428278        |
+geometric_standard_deviation_travel_time  | 1455932 non-null | float64 | 585           |
+
+
+**sourceid**: 
+
+
+
+ 
 
 
