@@ -1,9 +1,9 @@
 # Uber Travel-Time Data Analysis
-## Project Objective-
+## **Project Objective-**
 To analyses the Uber Movement Data of New-Delhi and predict the time taken to travel from point A to point B.
 
 
-### **1. New-Delhi Wards Data**
+## 1. New-Delhi Wards Data
 ### Data Description:
 - **Total Number of Rows**: 290
 - **Total Number of Columns**: 5
@@ -21,8 +21,8 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 
 **WARD_NO**: There is unique ward number assigned to every ward, here are 289 unique wards with 1 empty entry.\
 **WARD_NAME**: Name of the particular ward, here are 288 unique wards with 1 empty entry.\
-**MOVEMENT_ID**: Every ward have a unique movement-id which is same for every location of that particular ward.\
-**DISPLAY_NAME**: Every ward have a unique Display name which is the proper name of that particular ward used to identify different locations.\
+**MOVEMENT_ID**: Every ward has a unique movement-id which is same for every location of that particular ward.\
+**DISPLAY_NAME**: Every ward has a unique Display name which is the proper name of that particular ward used to identify different locations.\
 **geometry**: Geometry column displays the latitudes and longitudes of the wards.\
 ### Exploratory Data Analysis
 #### 1. Plot of Delhi:
@@ -66,7 +66,7 @@ Inferences:
 Inference:
  - Every ward have a their centroid even the one which don't have ward-no. ans ward-name.
  
- ### **New-delhi wards 2019(quater-2) All-Hourly-Aggregate data**
+ ## 2. New-delhi wards 2019(quater-2) All-Hourly-Aggregate data
  ### Data Description:
 - **Total Number of Rows**: 1455932
 - **Total Number of Columns**: 7
@@ -84,9 +84,17 @@ geometric_mean_travel_time                | 1455932 non-null | float64 | 428278 
 geometric_standard_deviation_travel_time  | 1455932 non-null | float64 | 585           |
 
 
-**sourceid**: 
+**sourceid**: It is the movement-id of a specific ward, whenever an Uber cab is booked at a specific source, a sourceid is assigned to it which is nothing but the movement id of that source(ward).\
+**dstid**: dstid is associated with the destination, booked by the customer. A destination-id is assigned to every booked destination which is nothing but the movement-id of that destination(ward).\
+**mean_travel_time**: It is the mean time taken to travel from source to destination through all possible paths.\
+**standard_deviation_travel_time**: It is the standard-deviation of the time taken to travel from source to destination though all possible paths. It tells about the variance of time taken to travel from various paths.\
+**geometric_mean_travel_time**: For instance it is the mean time taken to travel from all points which are roughly the centroids of a ward A to all roughly centroid of ward B.\
+**geometric_standard_deviation_travel_time**: It is the standard deviation of the geometric_mean_travel_time.\
+-**Data description**:
+![image](https://user-images.githubusercontent.com/57316337/88336166-27fb1480-cd52-11ea-8d4f-468853d723e7.png)
 
 
+### Exploratory Data Analysis
 
  
 
