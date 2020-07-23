@@ -92,7 +92,7 @@ geometric_standard_deviation_travel_time  | 1455932 non-null | float64 | 585    
 **geometric_standard_deviation_travel_time**: It is the standard deviation of the geometric_mean_travel_time.\
 
 
--**Data description**:
+- **Data description**:
 
 
 ![image](https://user-images.githubusercontent.com/57316337/88336166-27fb1480-cd52-11ea-8d4f-468853d723e7.png)
