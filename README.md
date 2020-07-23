@@ -90,7 +90,11 @@ geometric_standard_deviation_travel_time  | 1455932 non-null | float64 | 585    
 **standard_deviation_travel_time**: It is the standard-deviation of the time taken to travel from source to destination though all possible paths. It tells about the variance of time taken to travel from various paths.\
 **geometric_mean_travel_time**: For instance it is the mean time taken to travel from all points which are roughly the centroids of a ward A to all roughly centroid of ward B.\
 **geometric_standard_deviation_travel_time**: It is the standard deviation of the geometric_mean_travel_time.\
+
+
 -**Data description**:
+
+
 ![image](https://user-images.githubusercontent.com/57316337/88336166-27fb1480-cd52-11ea-8d4f-468853d723e7.png)
 
 
