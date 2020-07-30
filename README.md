@@ -54,6 +54,11 @@ Inference:
 Inferences:
  - The red coloured hatched lines represting the ward which don't have a Ward-Name.
  - This shows that the same ward have both the missing values i.e, of ward-no. and ward-name.
+ - This unknown ward is some unnamed road in Shahdra Delhi.
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/57316337/88969688-d3661500-d2ce-11ea-9fc7-ce8594389d91.png)
+
 
 
 
@@ -64,7 +69,7 @@ Inferences:
 
 
 Inference:
- - Every ward have a their centroid even the one which don't have ward-no. ans ward-name.
+ - Every ward have their Latitude and longitude of centroid with respect to the lat-long of the geometry of the ward. Even the one which doesn't have the ward-no. and ward-name have their geometries.
  
  ## 2. New-delhi wards 2019(quater-2) All-Hourly-Aggregate data
  ### Data Description:
@@ -86,10 +91,10 @@ geometric_standard_deviation_travel_time  | 1455932 non-null | float64 | 585    
 
 **sourceid**: It is the movement-id of a specific ward, whenever an Uber cab is booked at a specific source, a sourceid is assigned to it which is nothing but the movement id of that source(ward).\
 **dstid**: dstid is associated with the destination, booked by the customer. A destination-id is assigned to every booked destination which is nothing but the movement-id of that destination(ward).\
-**mean_travel_time**: It is the mean time taken to travel from source to destination through all possible paths.\
-**standard_deviation_travel_time**: It is the standard-deviation of the time taken to travel from source to destination though all possible paths. It tells about the variance of time taken to travel from various paths.\
-**geometric_mean_travel_time**: For instance it is the mean time taken to travel from all points which are roughly the centroids of a ward A to all roughly centroid of ward B.\
-**geometric_standard_deviation_travel_time**: It is the standard deviation of the geometric_mean_travel_time.\
+**mean_travel_time**: It is the mean time(in seconds) taken to travel from source to destination through all possible paths.\
+**standard_deviation_travel_time**: It is the standard-deviation of the time(in seconds) taken to travel from source to destination though all possible paths. It tells about the variance of time taken to travel from various paths.\
+**geometric_mean_travel_time**: For instance it is the mean time(in seconds) taken to travel from all points which are roughly the centroids of a ward A to all roughly centroid of ward B.\
+**geometric_standard_deviation_travel_time**: It is the standard deviation of the geometric_mean_travel_time(in seconds).\
 
 
 - **Data description**:
@@ -99,7 +104,61 @@ geometric_standard_deviation_travel_time  | 1455932 non-null | float64 | 585    
 
 
 ### Exploratory Data Analysis
+#### Univariate Analysis
+#### 1. Distribution of Sourceid and Dstid
 
  
+![image](https://user-images.githubusercontent.com/57316337/88968394-e7a91280-d2cc-11ea-8c86-e0ceb28d296a.png) \
+Blue- Indicates Sourceid\
+Orange- Indicates Dstid
+
+
+Inferences:
+- Sourceid and Dstid have somewhat similar distribution. The reason for almost same count for both sourceid and dstid is because there are some places where people have gone and retured from there more often like the office area or some tourist spot etc, similarly for the less visited places so there the retured booking are also less.
+- There are some peaks like from 0-20 and 60-70, this may be because these are the office area or the market place or tourist spots etc where people go and return more often.
+
+
+#### 2. 'Hour of Day' distribution
+
+
+![image](https://user-images.githubusercontent.com/57316337/88971595-d8789380-d2d1-11ea-99c3-fb882e684183.png)
+
+
+Inferences:
+- From 0 i.e, from 12-am to 3-am the number of uber booking keeps decreasing as these are the late-night hours, and then from 4-am it keeps increasing untill 12-noon because people started to travel for their offices and schools, colleges etc and after 12 the grapgh have almost maintains its peak like there have been a lot of booking through-out the day only after 8 or 9 it is slightly decreasing as people have already retured at their place.
+
+
+#### 3. 'Mean travel time distribution'
+
+
+![image](https://user-images.githubusercontent.com/57316337/88972529-57ba9700-d2d3-11ea-8d3e-0f14d64465f2.png)
+
+
+Inferences:
+- The mean-travel-time for most of the places is approx half an hour(2000 sec.) and the maximum travel-time is approx 6000 sec. i.e, 1.6 hours.
+
+
+### Bivariate analysis
+#### 4. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
