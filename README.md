@@ -128,7 +128,7 @@ Inferences:
 - From 0 i.e, from 12-am to 3-am the number of uber booking keeps decreasing as these are the late-night hours, and then from 4-am it keeps increasing untill 12-noon because people started to travel for their offices and schools, colleges etc and after 12 the grapgh have almost maintains its peak like there have been a lot of booking through-out the day only after 8 or 9 it is slightly decreasing as people have already retured at their place.
 
 
-#### 3. 'Mean travel time distribution'
+#### 3. 'Mean travel time'distribution:
 
 
 ![image](https://user-images.githubusercontent.com/57316337/88972529-57ba9700-d2d3-11ea-8d3e-0f14d64465f2.png)
@@ -138,8 +138,85 @@ Inferences:
 - The mean-travel-time for most of the places is approx half an hour(2000 sec.) and the maximum travel-time is approx 6000 sec. i.e, 1.6 hours.
 
 
+#### 4. 'Standard-deviation-travel-time' distribution:
+
+
+![image](https://user-images.githubusercontent.com/57316337/89069608-1688bc80-d391-11ea-9ce6-e666f7529bfc.png)
+
+
+Inferences:
+- The peak is at approx 8 mins(500 seconds) that means most of the cabs took 8 minutes more or less to cover the distance that the mean-travel-time.
+
+
 ### Bivariate analysis
-#### 4. 
+#### 1. Average of mean-travel-time over the hours:
+
+
+![image](https://user-images.githubusercontent.com/57316337/89054017-bcc6c900-d375-11ea-8ac7-40f15a8bd326.png)
+
+
+Inferences:
+- The average mean-travel-time varies all over the hours, at night it is the least because of the lesser traffic at this time, the uber bookings are also less at this time as seen stated earlier.
+- Then the average time keeps increasing uptill 11 or 12 noon because of the increasing traffic and also increased number of bookings.
+- After 12 noon the average travel-time is not constant although the number of bookings are almost constant as saw earlier, this is because at morning between 9am-12pm and in evening between 5pm-7pm the traffic is the most as this is the office arrival and departure time for most of the working people, so the average mean-travel-time also inreases with the traffic.
+
+
+#### 2. Hour-of-day Vs mean-travel-time:
+
+
+![image](https://user-images.githubusercontent.com/57316337/89055405-f0a2ee00-d377-11ea-8dfe-2034b4342dd1.png)
+
+
+Inferences:
+- The graph clearly shows the outliers at certain hours of the day, although it solely depends on the destination like how far the customer wants to travel.
+
+
+#### 3. Hour-of-day Vs Standard-deviation-travel-time:
+
+
+![image](https://user-images.githubusercontent.com/57316337/89073121-8306ba00-d397-11ea-993e-a4cdcb2a0f10.png)
+
+
+Inferences:
+- There are outliers at certain hours but again the standard-deviation doesn't depends on the hour of day, it siply shows that some uber cabs have taked significatly more or lesser time than the mean-travel-time taken for that particular destination.
+
+
+#### 4. Mean-travel-time Vs Geometric-mean-travel-time
+
+
+![image](https://user-images.githubusercontent.com/57316337/89073502-42f40700-d398-11ea-8e57-89fc3d6deef4.png)
+
+
+Inferences:
+Both Mean-travel-time and Geometric-mean-travel-time have a highly corelated linear relation between them, For instance if the geometric-mean-travel-time is the actual travel-time taken from the centroids of the wards then the mean-travel-time doesn't vary much with it.
+
+
+### Pair Plot
+
+
+![image](https://user-images.githubusercontent.com/57316337/89053957-a15bbe00-d375-11ea-8ca4-421c3ef6e301.png)
+
+
+Inferences:
+- This shows the exact relationship of each of the variables with each other.
+- It tells about the outliers with respect to different variables, some of the important variables which i have used in my model have already been described above.
+
+
+### Correlation:
+
+
+![image](https://user-images.githubusercontent.com/57316337/89074565-2c4eaf80-d39a-11ea-8302-1aa6abd3ff0d.png)
+
+
+![image](https://user-images.githubusercontent.com/57316337/89074598-3a9ccb80-d39a-11ea-89e0-043d7093a35e.png)
+
+
+Inferences:
+- Mean-travel-time and Geometric-mean-travel-time are highly correlated as already seen through the graphs.
+- mean_travel_time, geometric_mean_travel_time, standard_deviation_travel_time are also slightly correlated with Hour-of-day, although the exact reason can't be stated for that.
+- Although the sourceid and dstid have similar kind of distribution as shown earlier but they are not at all correlated with each other, because the place where customer wants to go i.e, the destination is nothing to do with his current location i.e, the source.
+- geometric_mean_travel_time and geometric_standard_deviation_travel_time are the most non correlated here amongst all, simply because time-taken to travel and its standard deviation does not have any connection.
+
 
 
 
