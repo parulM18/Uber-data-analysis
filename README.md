@@ -272,15 +272,25 @@ Inferences:
 
 
 ### - Getting predicted values for mean_travel_time
-
-
-![image](https://user-images.githubusercontent.com/57316337/89111928-7064b180-d479-11ea-8ef7-5f5741cdf0fa.png)
+---
+```Python
+y_pred = regressor.predict(X_test)
+```
+---
 
 
 ### - Accuracy:
-
-
-![image](https://user-images.githubusercontent.com/57316337/89111940-c33e6900-d479-11ea-8439-3872c1968a86.png)
+---
+```Python
+from sklearn.metrics import r2_score
+score=r2_score(y_test,y_pred)
+```
+---
+```Python
+score
+0.9529555244619259
+```
+---
 
 
 
