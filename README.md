@@ -243,9 +243,25 @@ Inferences:
 - Seperated the latitudes and longitudes of sourceid and dstid seperately so as to find the distance between lat-long of sourceid and lat-long of dstid.
 - Calculated the distance between them using pyproj and from pyproj installing geod.
 
+---
+```Python
+wgs84_geod = Geod(ellps='WGS84') #Distance will be measured on this ellipsoid - more accurate than a spherical method
 
-![image](https://user-images.githubusercontent.com/57316337/89111784-79548380-d477-11ea-856d-c79e183d8b08.png)
+#Get distance between pairs of lat-lon points
+def Distance(lat1,lon1,lat2,lon2):
+  az12,az21,dist = wgs84_geod.inv(lon1,lat1,lon2,lat2) #Yes, this order is correct
+  return dist
 
+#Create test data
+lat1 = np.random.uniform(-90,90,100)
+lon1 = np.random.uniform(-180,180,100)
+lat2 = np.random.uniform(-90,90,100)
+lon2 = np.random.uniform(-180,180,100)
+
+#Add/update a column to the data frame with the distances (in metres)
+data['dist'] = Distance(data['Source_Latitude'].tolist(),data['Source_Longitude'].tolist(),data['dst_Latitude'].tolist(),data['dst_Longitude'].tolist())
+```
+---
 
 - Saved the final data in csv format.
 
@@ -259,19 +275,30 @@ Inferences:
 - Dependent variable: mean_travel_time
 
 ## Applying Model
-#### - Converted data into test and train
+#### Converted data into test and train
+---
+```Python
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.25,random_state=0)
+```
+---
+### Applying RandomForestRegressor
+---
+```Python
+from sklearn.ensemble import RandomForestRegressor 
+regressor = RandomForestRegressor()
+regressor.fit(x_train,y_train)
+RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                      max_depth=None, max_features='auto', max_leaf_nodes=None,
+                      max_samples=None, min_impurity_decrease=0.0,
+                      min_impurity_split=None, min_samples_leaf=1,
+                      min_samples_split=2, min_weight_fraction_leaf=0.0,
+                      n_estimators=100, n_jobs=None, oob_score=False,
+                      random_state=None, verbose=0, warm_start=False)
+```
+---
 
-
-![image](https://user-images.githubusercontent.com/57316337/89111891-d997f500-d478-11ea-9e93-0015a8c15be6.png)
-
-
-### - Applying RandomForestRegressor
-
-
-![image](https://user-images.githubusercontent.com/57316337/89111905-1663ec00-d479-11ea-8c14-b37e6a4707d1.png)
-
-
-### - Getting predicted values for mean_travel_time
+### Getting predicted values for mean_travel_time
 ---
 ```Python
 y_pred = regressor.predict(X_test)
@@ -279,7 +306,7 @@ y_pred = regressor.predict(X_test)
 ---
 
 
-### - Accuracy:
+### Accuracy:
 ---
 ```Python
 from sklearn.metrics import r2_score
