@@ -1,7 +1,17 @@
 # Uber Travel-Time Data Analysis
 ## **Project Objective-**
 To analyses the Uber Movement Data of New-Delhi and predict the time taken to travel from point A to point B.
+- The data is available on  https://movement.uber.com/
+- Used NEW_DELHI_WARDS.JSON Data for analysing all the wards.
+- Used 'Travel Times by Hour of Day (All Days)' for 2019 Quarter-2 for further analyses.
 
+![image](https://user-images.githubusercontent.com/57316337/89111179-583c6480-d470-11ea-90ce-3a0ce56b3f15.png)
+
+
+## Installation:
+- pip install geopandas
+- pip install shapely
+- pip install pyproj
 
 ## 1. New-Delhi Wards Data
 ### Data Description:
@@ -216,6 +226,63 @@ Inferences:
 - mean_travel_time, geometric_mean_travel_time, standard_deviation_travel_time are also slightly correlated with Hour-of-day, although the exact reason can't be stated for that.
 - Although the sourceid and dstid have similar kind of distribution as shown earlier but they are not at all correlated with each other, because the place where customer wants to go i.e, the destination is nothing to do with his current location i.e, the source.
 - geometric_mean_travel_time and geometric_standard_deviation_travel_time are the most non correlated here amongst all, simply because time-taken to travel and its standard deviation does not have any connection.
+
+
+## Prepairing Data for Applying Model
+- Joined the New-Delhi-ward data and Hourly-Aggregate-data such that in the final Data I have the information of sourceid and destinationid with their geometries, mean_travel_time between them according to the hour of day.
+
+
+![image](https://user-images.githubusercontent.com/57316337/89111687-786f2200-d476-11ea-9bc4-be93b2494d27.png)
+
+
+- Converted the multipoligon-geometry column of wards into the latitude and longitude of the centroid of every ward.
+
+![image](https://user-images.githubusercontent.com/57316337/89111707-a81e2a00-d476-11ea-8b84-eb55bc72f724.png)
+
+
+- Seperated the latitudes and longitudes of sourceid and dstid seperately so as to find the distance between lat-long of sourceid and lat-long of dstid.
+- Calculated the distance between them using pyproj and from pyproj installing geod.
+
+
+![image](https://user-images.githubusercontent.com/57316337/89111784-79548380-d477-11ea-856d-c79e183d8b08.png)
+
+
+- Saved the final data in csv format.
+
+
+![image](https://user-images.githubusercontent.com/57316337/89111740-0b0fc100-d477-11ea-967d-18668334834a.png)
+
+
+- Independent variables:
+ - Categorical variables- sourceid, dstid, HOD
+ - Continuous variables- Distance in Km
+- Dependent variable: mean_travel_time
+
+## Applying Model
+#### - Converted data into test and train
+
+
+![image](https://user-images.githubusercontent.com/57316337/89111891-d997f500-d478-11ea-9e93-0015a8c15be6.png)
+
+
+### - Applying RandomForestRegressor
+
+
+![image](https://user-images.githubusercontent.com/57316337/89111905-1663ec00-d479-11ea-8c14-b37e6a4707d1.png)
+
+
+### - Getting predicted values for mean_travel_time
+
+
+![image](https://user-images.githubusercontent.com/57316337/89111928-7064b180-d479-11ea-8ef7-5f5741cdf0fa.png)
+
+
+### - Accuracy:
+
+
+![image](https://user-images.githubusercontent.com/57316337/89111940-c33e6900-d479-11ea-8439-3872c1968a86.png)
+
+
 
 
 
