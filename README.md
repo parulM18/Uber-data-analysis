@@ -270,8 +270,8 @@ data['dist'] = Distance(data['Source_Latitude'].tolist(),data['Source_Longitude'
 
 
 - Independent variables:
- - Categorical variables- sourceid, dstid, HOD
- - Continuous variables- Distance in Km
+  - Categorical variables- sourceid, dstid, HOD
+  - Continuous variables- Distance in Km
 - Dependent variable: mean_travel_time
 
 ## Applying Model
