@@ -7,6 +7,22 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 
 ![image](https://user-images.githubusercontent.com/57316337/89111179-583c6480-d470-11ea-90ce-3a0ce56b3f15.png)
 
+## Content Keywords
+- Installation
+- New-Delhi Wards Data
+  - Data describtion
+  - Exploratory Data Analysis
+-  New-delhi wards 2019(quater-2) All-Hourly-Aggregate data
+   - Data describtion
+   - Exploratory Data Analysis
+     - Univariate Analysis
+     - Bivariate Analysis
+     - Pair Plot
+     - Correlation
+- Prepairing Data for Applying Model
+- Applying Model
+- Accuracy
+ 
 
 ## Installation:
 - pip install geopandas
@@ -306,7 +322,7 @@ y_pred = regressor.predict(X_test)
 ---
 
 
-### Accuracy:
+## Accuracy:
 ---
 ```Python
 from sklearn.metrics import r2_score
