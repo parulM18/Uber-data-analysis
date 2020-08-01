@@ -232,13 +232,13 @@ Inferences:
 - Joined the New-Delhi-ward data and Hourly-Aggregate-data such that in the final Data I have the information of sourceid and destinationid with their geometries, mean_travel_time between them according to the hour of day.
 
 
-![image](https://user-images.githubusercontent.com/57316337/89111687-786f2200-d476-11ea-9bc4-be93b2494d27.png)
+![image](https://user-images.githubusercontent.com/57316337/89112188-ba9b6200-d47c-11ea-89e6-ab58617ce73f.png)
 
 
 - Converted the multipoligon-geometry column of wards into the latitude and longitude of the centroid of every ward.
 
-![image](https://user-images.githubusercontent.com/57316337/89111707-a81e2a00-d476-11ea-8b84-eb55bc72f724.png)
 
+![image](https://user-images.githubusercontent.com/57316337/89112177-95a6ef00-d47c-11ea-9a60-48a4cd16e9db.png)
 
 - Seperated the latitudes and longitudes of sourceid and dstid seperately so as to find the distance between lat-long of sourceid and lat-long of dstid.
 - Calculated the distance between them using pyproj and from pyproj installing geod.
@@ -266,7 +266,7 @@ data['dist'] = Distance(data['Source_Latitude'].tolist(),data['Source_Longitude'
 - Saved the final data in csv format.
 
 
-![image](https://user-images.githubusercontent.com/57316337/89111740-0b0fc100-d477-11ea-967d-18668334834a.png)
+![image](https://user-images.githubusercontent.com/57316337/89112153-4f519000-d47c-11ea-907e-43494da943ce.png)
 
 
 - Independent variables:
