@@ -231,7 +231,7 @@ Inferences:
 ### Correlation:
 
 
-![image](https://user-images.githubusercontent.com/57316337/89074565-2c4eaf80-d39a-11ea-8302-1aa6abd3ff0d.png)
+![3 (2)](https://user-images.githubusercontent.com/57316337/89729898-9b419d80-da57-11ea-9033-56d0ff49b159.png)
 
 
 ![image](https://user-images.githubusercontent.com/57316337/89074598-3a9ccb80-d39a-11ea-89e0-043d7093a35e.png)
@@ -248,13 +248,13 @@ Inferences:
 - Joined the New-Delhi-ward data and Hourly-Aggregate-data such that in the final Data I have the information of sourceid and destinationid with their geometries, mean_travel_time between them according to the hour of day.
 
 
-![image](https://user-images.githubusercontent.com/57316337/89112188-ba9b6200-d47c-11ea-89e6-ab58617ce73f.png)
+![4 (3)](https://user-images.githubusercontent.com/57316337/89730013-7ef23080-da58-11ea-92f8-a0714f46bf69.png)
 
 
 - Converted the multipoligon-geometry column of wards into the latitude and longitude of the centroid of every ward.
 
 
-![image](https://user-images.githubusercontent.com/57316337/89112177-95a6ef00-d47c-11ea-9a60-48a4cd16e9db.png)
+![5 (2)](https://user-images.githubusercontent.com/57316337/89730091-3e46e700-da59-11ea-9020-f2118934ec58.png)
 
 - Seperated the latitudes and longitudes of sourceid and dstid seperately so as to find the distance between lat-long of sourceid and lat-long of dstid.
 - Calculated the distance between them using pyproj and from pyproj installing geod.
@@ -282,7 +282,7 @@ data['dist'] = Distance(data['Source_Latitude'].tolist(),data['Source_Longitude'
 - Saved the final data in csv format.
 
 
-![image](https://user-images.githubusercontent.com/57316337/89112153-4f519000-d47c-11ea-907e-43494da943ce.png)
+![6 (2)](https://user-images.githubusercontent.com/57316337/89730095-4141d780-da59-11ea-9bdc-2ef80dec0b79.png)
 
 
 - Independent variables:
@@ -291,7 +291,7 @@ data['dist'] = Distance(data['Source_Latitude'].tolist(),data['Source_Longitude'
 - Dependent variable: mean_travel_time
 
 ## Applying Model
-#### Converted data into test and train
+### Converted data into test and train
 ---
 ```Python
 from sklearn.model_selection import train_test_split
@@ -334,6 +334,18 @@ score
 0.9529555244619259
 ```
 ---
+
+
+## Travel_time compaired with Google-Maps
+
+
+![2 (2)](https://user-images.githubusercontent.com/57316337/89729791-a8aa5800-da56-11ea-9fa1-9accf0e86383.png)
+
+
+- mean_travel_time is what Google-Maps shows and approx_travel_time is the middle most time between both the ranges of the mean_travel_time
+- Predicted_travel_time is the time predicted by the model 
+
+
 
 
 
