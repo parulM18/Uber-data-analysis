@@ -22,7 +22,7 @@ To analyses the Uber Movement Data of New-Delhi and predict the time taken to tr
 - Prepairing Data for Applying Model
 - Applying Model
 - Accuracy
- 
+- Travel_time compaired with Google-Map's Travel_time
 
 ## Installation:
 - pip install geopandas
@@ -336,7 +336,7 @@ score
 ---
 
 
-## Travel_time compaired with Google-Maps
+## Travel_time compaired with Google-Map's Travel_time
 
 
 ![2 (2)](https://user-images.githubusercontent.com/57316337/89729791-a8aa5800-da56-11ea-9fa1-9accf0e86383.png)
